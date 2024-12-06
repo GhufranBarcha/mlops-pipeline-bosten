@@ -6,7 +6,6 @@ import joblib
 
 # Load and prepare data
 df = pd.read_csv("BostonHousing.csv")
-print(df)
 
 X = df.drop(columns=["medv"])  # Drop the target column to get the features
 y = df["medv"]  

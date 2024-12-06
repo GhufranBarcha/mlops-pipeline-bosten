@@ -42,8 +42,7 @@ pipeline {
     stage('Deploy Flask API') {
         steps {
             sh '''
-            . venv/bin/activate   # Activate the virtual environment
-            nohup flask run & # Run the Flask app
+            . venv/bin/activate && flask run # Run the Flask app
             '''
         }
     }
